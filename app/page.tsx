@@ -864,12 +864,13 @@ ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
           : mode
       }?`}
 </h3>
-                    <p
-                      className={`text-sm sm:text-base text-gray-700 dark:text-gray-400 max-w-md mx-auto px-2 sm:px-4 ${uiStyle === "pixel" ? "pixel-font" : ""
-                        }`}
-                    >
-                        `I'm your ${currentMode.label.toLowerCase()} assistant. Ask me anything or use the quick actions to get started.`
-                    </p>
+                 <p
+  className={`text-sm sm:text-base text-gray-700 dark:text-gray-400 max-w-md mx-auto px-2 sm:px-4 ${
+    uiStyle === "pixel" ? "pixel-font" : ""
+  }`}
+>
+  I'm your {currentMode.label.toLowerCase()} assistant. Ask me anything or use the quick actions to get started.
+</p>
                   </div>
                   <div className="flex flex-wrap justify-center gap-2 px-2">
                     {QUICK_ACTIONS[mode].map((action, index) => (
