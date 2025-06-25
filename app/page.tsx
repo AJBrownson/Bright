@@ -843,25 +843,32 @@ ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
                     <div className="mb-8">
                       <AIVisualization mode={mode} isActive={isLoading || isListening} />
                     </div>
-                    <h3
-                      className={`text-xl sm:text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2 ${uiStyle === "pixel" ? "font-bold pixel-font" : ""
-                        }`}
-                    >
-                      {mode === "bff"
-                        ? uiStyle === "pixel"
-                          ? "HEY BESTIE! WHAT'S ON YOUR MIND? 💕"
-                          : "Hey bestie! What's on your mind? 💕"
-                        : uiStyle === "pixel"
-                          ? `WHAT CAN I HELP YOU ${mode === "general" ? "WITH" : `${mode === "creative" ? "CREATE" : mode.toUpperCase()}`}?`
-                          : `What can I help you ${mode === "general" ? "with" : `${mode === "creative" ? "create" : mode}`}?`}
-                    </h3>
+                 <h3
+  className={`text-xl sm:text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2 ${
+    uiStyle === "pixel" ? "font-bold pixel-font" : ""
+  }`}
+>
+  {uiStyle === "pixel"
+    ? `WHAT CAN I HELP YOU ${
+        mode === "general"
+          ? "WITH"
+          : mode === "creative"
+          ? "CREATE"
+          : mode.toUpperCase()
+      }?`
+    : `What can I help you ${
+        mode === "general"
+          ? "with"
+          : mode === "creative"
+          ? "create"
+          : mode
+      }?`}
+</h3>
                     <p
                       className={`text-sm sm:text-base text-gray-700 dark:text-gray-400 max-w-md mx-auto px-2 sm:px-4 ${uiStyle === "pixel" ? "pixel-font" : ""
                         }`}
                     >
-                      {mode === "bff"
-                        ? "I'm your GenZ bestie who speaks your language! Chat with me in any language and I'll vibe with you! ✨"
-                        : `I'm your ${currentMode.label.toLowerCase()} assistant. Ask me anything or use the quick actions to get started.`}
+                        `I'm your ${currentMode.label.toLowerCase()} assistant. Ask me anything or use the quick actions to get started.`
                     </p>
                   </div>
                   <div className="flex flex-wrap justify-center gap-2 px-2">
