@@ -27,30 +27,15 @@ export function AIVisualization({ mode, isActive }: AIVisualizationProps) {
         "border-cyan-500/40 shadow-cyan-500/20 bg-gradient-to-br from-cyan-100/30 to-blue-100/30 dark:from-cyan-950/30 dark:to-blue-950/30",
       particleColor: new THREE.Color(0x00a0ff),
     },
-    productivity: {
+    forex: {
       color:
         "border-emerald-500/40 shadow-emerald-500/20 bg-gradient-to-br from-emerald-100/30 to-teal-100/30 dark:from-emerald-950/30 dark:to-teal-950/30",
       particleColor: new THREE.Color(0x10b981),
     },
-    wellness: {
+    crypto: {
       color:
         "border-rose-500/40 shadow-rose-500/20 bg-gradient-to-br from-rose-100/30 to-pink-100/30 dark:from-rose-950/30 dark:to-pink-950/30",
       particleColor: new THREE.Color(0xf43f5e),
-    },
-    learning: {
-      color:
-        "border-purple-500/40 shadow-purple-500/20 bg-gradient-to-br from-purple-100/30 to-indigo-100/30 dark:from-purple-950/30 dark:to-indigo-950/30",
-      particleColor: new THREE.Color(0x8b5cf6),
-    },
-    creative: {
-      color:
-        "border-amber-500/40 shadow-amber-500/20 bg-gradient-to-br from-amber-100/30 to-orange-100/30 dark:from-amber-950/30 dark:to-orange-950/30",
-      particleColor: new THREE.Color(0xf59e0b),
-    },
-    bff: {
-      color:
-        "border-pink-500/40 shadow-pink-500/20 bg-gradient-to-br from-pink-100/30 to-rose-100/30 dark:from-pink-950/30 dark:to-rose-950/30",
-      particleColor: new THREE.Color(0xec4899),
     },
   }
 
