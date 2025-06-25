@@ -2,34 +2,34 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Radhika',
+  title: 'Bright',
   description:
-    'Radhika is a versatile AI chatbot designed to assist with a wide range of tasks, from answering questions to providing recommendations and engaging in casual conversation.',
-  generator: 'Rohan Sharma',
+    'Bright is a versatile AI chatbot designed to assist with a wide range of tasks, from answering questions to providing recommendations and engaging in casual conversation.',
+  generator: 'Anni',
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
     title: 'Radhika',
-    siteName: 'radhika-sharma',
-    url: 'https://radhika-sharma.vercel.app/',
+    siteName: 'bright',
+    url: 'https://getbright.vercel.app/',
     description:
-      'Radhika is a versatile AI chatbot designed to assist with a wide range of tasks, from answering questions to providing recommendations and engaging in casual conversation.',
+      'Bright is a versatile AI chatbot designed to assist with a wide range of tasks, from answering questions to providing recommendations and engaging in casual conversation.',
     type: 'website',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Radhika AI Chatbot',
+        alt: 'Bright AI Chatbot',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Radhika',
+    title: 'Bright',
     description:
-      'Radhika is a versatile AI chatbot designed to assist with a wide range of tasks, from answering questions to providing recommendations and engaging in casual conversation.',
+      'Bright is a versatile AI chatbot designed to assist with a wide range of tasks, from answering questions to providing recommendations and engaging in casual conversation.',
     images: ['/og-image.jpg'],
   },
 }
