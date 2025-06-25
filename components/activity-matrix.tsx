@@ -133,24 +133,14 @@ export function ActivityMatrix({ messages = [], currentMode = "general" }: Activ
       color: "from-cyan-500 to-blue-500",
     },
     {
-      mode: "Creative",
-      value: currentMode === "creative" ? Math.min(90, messages.length * 18 + 15) : Math.min(30, messages.length * 6),
+      mode: "Forex",
+      value: currentMode === "forex" ? Math.min(90, messages.length * 18 + 15) : Math.min(30, messages.length * 6),
       color: "from-amber-500 to-orange-500",
     },
     {
-      mode: "Learning",
-      value: currentMode === "learning" ? Math.min(75, messages.length * 12 + 8) : Math.min(25, messages.length * 5),
+      mode: "Crypto",
+      value: currentMode === "crypto" ? Math.min(75, messages.length * 12 + 8) : Math.min(25, messages.length * 5),
       color: "from-purple-500 to-indigo-500",
-    },
-    {
-      mode: "Wellness",
-      value: currentMode === "wellness" ? Math.min(60, messages.length * 10 + 5) : Math.min(20, messages.length * 4),
-      color: "from-rose-500 to-pink-500",
-    },
-    {
-      mode: "BFF",
-      value: currentMode === "bff" ? Math.min(95, messages.length * 20 + 20) : Math.min(35, messages.length * 7),
-      color: "from-pink-500 to-rose-500",
     },
   ]
 
