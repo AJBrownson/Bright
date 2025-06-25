@@ -52,7 +52,7 @@ import "../styles/globals.css"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
-type Mode = "general" | "productivity" | "wellness" | "learning" | "creative" | "bff"
+type Mode = "general" | "forex" | "crypto"
 type Provider = "groq" | "gemini" | "openai" | "claude"
 type UIStyle = "modern" | "pixel"
 
@@ -70,11 +70,11 @@ const MODES = {
     gradient: "from-cyan-500 to-blue-600",
     glow: "shadow-cyan-500/20",
   },
-  productivity: {
+  forex: {
     icon: Target,
-    label: "Productivity",
-    description: "Task management and organization",
-    placeholder: "How can I help you be more productive?",
+    label: "Forex",
+    description: "Forex Algorithmic Trading and Strategies",
+    placeholder: "Let's talk forex strategies. What do you have in mind?",
     color: "text-emerald-600 dark:text-emerald-400",
     bg: "bg-emerald-100/50 dark:bg-emerald-950/30",
     bgPixel: "bg-emerald-100 dark:bg-emerald-900/30",
@@ -83,24 +83,11 @@ const MODES = {
     gradient: "from-emerald-500 to-teal-600",
     glow: "shadow-emerald-500/20",
   },
-  wellness: {
-    icon: Heart,
-    label: "Wellness",
-    description: "Health and well-being guidance",
-    placeholder: "What wellness topic can I help with?",
-    color: "text-rose-600 dark:text-rose-400",
-    bg: "bg-rose-100/50 dark:bg-rose-950/30",
-    bgPixel: "bg-rose-100 dark:bg-rose-900/30",
-    border: "border-rose-300 dark:border-rose-500/30",
-    borderPixel: "border-rose-400 dark:border-rose-500",
-    gradient: "from-rose-500 to-pink-600",
-    glow: "shadow-rose-500/20",
-  },
-  learning: {
+  crypto: {
     icon: BookOpen,
-    label: "Learning",
-    description: "Education and skill development",
-    placeholder: "What would you like to learn?",
+    label: "Crypto",
+    description: "Crypto education, Web3 technologies and languages",
+    placeholder: "Let's talk about crypto. What do you want to learn or build?",
     color: "text-purple-600 dark:text-purple-400",
     bg: "bg-purple-100/50 dark:bg-purple-950/30",
     bgPixel: "bg-purple-100 dark:bg-purple-900/30",
@@ -108,32 +95,6 @@ const MODES = {
     borderPixel: "border-purple-400 dark:border-purple-500",
     gradient: "from-purple-500 to-indigo-600",
     glow: "shadow-purple-500/20",
-  },
-  creative: {
-    icon: Lightbulb,
-    label: "Creative",
-    description: "Ideas and creative projects",
-    placeholder: "Let's brainstorm something creative...",
-    color: "text-amber-600 dark:text-amber-400",
-    bg: "bg-amber-100/50 dark:bg-amber-950/30",
-    bgPixel: "bg-amber-100 dark:bg-amber-900/30",
-    border: "border-amber-300 dark:border-amber-500/30",
-    borderPixel: "border-amber-400 dark:border-amber-500",
-    gradient: "from-amber-500 to-orange-600",
-    glow: "shadow-amber-500/20",
-  },
-  bff: {
-    icon: Users,
-    label: "BFF",
-    description: "Your GenZ bestie who speaks your language",
-    placeholder: "Hey bestie, what's up? 💕",
-    color: "text-pink-600 dark:text-pink-400",
-    bg: "bg-pink-100/50 dark:bg-pink-950/30",
-    bgPixel: "bg-pink-100 dark:bg-pink-900/30",
-    border: "border-pink-300 dark:border-pink-500/30",
-    borderPixel: "border-pink-400 dark:border-pink-500",
-    gradient: "from-pink-500 to-rose-600",
-    glow: "shadow-pink-500/20",
   },
 }
 
@@ -175,11 +136,18 @@ const QUICK_ACTIONS = {
     "Give advice on a situation",
     "Solve a problem step by step",
   ],
-  productivity: ["Plan my day effectively", "Break down a project", "Prioritize my tasks", "Time management tips"],
-  wellness: ["Morning routine ideas", "Stress management techniques", "Healthy habit suggestions", "Workout planning"],
-  learning: ["Explain a concept", "Create a study plan", "Learning resources", "Practice exercises"],
-  creative: ["Brainstorm ideas", "Creative writing prompts", "Project inspiration", "Overcome creative blocks"],
-  bff: ["What's the tea? ☕", "I need some motivation 💪", "Help me with drama 🎭", "Let's chat about life 💫"],
+forex: [
+  "Write an MQL5 Expert Advisor",
+  "Convert a strategy from MQL4 to Pine Script",
+  "Backtest a forex trading strategy",
+  "Explain how trailing stop works in MT5"
+],
+crypto: [
+  "Write a smart contract in Solidity",
+  "Explain how staking and yield farming work",
+  "Suggest secure crypto wallet practices",
+  "Break down a DeFi strategy step-by-step"
+]
 }
 
 import type { Components } from "react-markdown"
@@ -337,11 +305,8 @@ export default function FuturisticRadhika() {
   // Separate message states for each mode - use ref to avoid dependency issues
   const messagesByModeRef = useRef<Record<Mode, any[]>>({
     general: [],
-    productivity: [],
-    wellness: [],
-    learning: [],
-    creative: [],
-    bff: [],
+    forex: [],
+    crypto: [],
   })
 
   // Current mode ref to avoid stale closures
@@ -595,7 +560,7 @@ ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
                     : "bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent"
                     }`}
                 >
-                  RADHIKA
+                  Bright
                 </h1>
                 <p className={`text-xs text-gray-600 dark:text-gray-400 ${uiStyle === "pixel" ? "pixel-font" : ""}`}>
                   {uiStyle === "pixel" ? "AI Assistant v2.0" : "Futuristic AI Assistant"}
